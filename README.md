@@ -15,6 +15,7 @@
 > * 사용자의 현재 경로에 따라 다른 컴포넌트를 보여준다.
 > + 설치 : yarn add -react-router-dom@5
 > - 사용 방식 : <Route path="주소 규칙" component={보여줄 컴포넌트} />
+> * Route에서 exact={true} 대신 exact만 써도 exact={true}라는 의미이다.(props를 설정할 때 값을 생략하면 true로 설정됨)
 
 ## Link
 > + Link 컴포넌트는 클릭하면 다른 주소로 이동시켜 주는 컴포넌트이다.
