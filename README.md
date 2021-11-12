@@ -16,6 +16,7 @@
 > + 설치 : yarn add -react-router-dom@5
 > - 사용 방식 : <Route path="주소 규칙" component={보여줄 컴포넌트} />
 > * Route에서 exact={true} 대신 exact만 써도 exact={true}라는 의미이다.(props를 설정할 때 값을 생략하면 true로 설정됨)
+> + path를 따로 설정해주지 않으면 모든 상황에 렌더링 됨
 
 ## Link
 > + Link 컴포넌트는 클릭하면 다른 주소로 이동시켜 주는 컴포넌트이다.
@@ -35,3 +36,20 @@
 ## 서브 라우트
 > + 라우트 내부에 또 라우트를 정의하는 것을 의미한다.
 > - 라우트로 사용되고 있는 컴포넌트의 내부에 Route 컴포넌트를 또 사용하면 된다.
+
+## history
+> + history 객체는 라우트로 사용된 컴포넌트에 match, location과 함께 전달되는 props 중 하나로, 이 객체를 통해 컴포넌트 내에 구현하는 메서드에서 라우터 API를 호출할 수 있습니다.
+> - 예를들어 특정 버튼을 눌렀을 때 뒤로 가거나, 로그인 후 화면을 전환하거나, 다른 페이지로 이탈하는 것을 방지할 때 사용한다.
+
+## withRouter
+> + withRouter 함수는 HoC(higher-order Component)이다.
+> - 라우트로 사용된 컴포넌트가 아니어도 match, location, history 객체를 접근할 수 있게 해준다.
+
+## Switch
+> + Switch 컴포넌트는 여러 Route를 감싸서 그 중 일치하는 단 하나의 라우트만을 렌더링시켜 준다.
+> - Switch를 사용하면 모든 규칙과 일치하지 않을 때 보여줄 Not Found 페이지도 구현할 수 있습니다.
+
+## NavLink
+> + 현재 경로와 Link에서 사용하는 경로가 일치하는 경우 특정 스타일 혹은 CSS 클래스를 적용할 수 있는 컴포넌트
+> - NavLink에서 링크가 활성화되었을 때의 스타이을 적용할 때는 activeStyle 값을 넣어준다.
+> * CSS 클래스를 적용할 때는 activeClassName 값을 props로 넣어준다.
